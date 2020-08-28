@@ -1,8 +1,12 @@
-from flask import Flask, request
+from flask import Flask
 import csv
 
 
 app = Flask(__name__)
+
+@app.route('/')
+def health():
+    return '', 200
 
 @app.route('/beds')
 def beds():
