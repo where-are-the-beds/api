@@ -1,15 +1,10 @@
 FROM alpine:3.12
 
-RUN apk add --no-cache \
-		py3-flask \
-	    py3-gunicorn \
-		nginx \
-		supervisor
+RUN apk add --no-cache py3-flask
 
 COPY wsgi.py . 
-COPY nginx.conf /etc/nginx/conf.d/
-COPY supervisord.conf .
 
 EXPOSE 80
 
-ENTRYPOINT ["supervisord", "-c", "supervisord.conf" ]
+ENTRYPOINT ["python3"]
+CMD ["wsgi.py"]

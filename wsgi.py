@@ -16,3 +16,6 @@ def beds():
         reader = csv.DictReader(csvfile)
         output = [item for item in reader]
     return dict(beds=output)
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port='80')
