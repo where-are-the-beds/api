@@ -1,11 +1,11 @@
 ## This project allows user to track availability of beds in the US
 
-### Functionality:
-```
-MVP 1
-- View all available beds 
-- View beds by utilization rate
-```
+### Views:
+View all available beds
+![All Availabled beds](images/all_beds.png)
+
+View beds utilization rate
+![Beds utilization rate](images/bed_utilization_rate.png)
 
 ### Technologies Used
 ```
