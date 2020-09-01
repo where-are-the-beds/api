@@ -14,7 +14,7 @@ def health():
 @app.route('/test')
 def list_beds():
     result = list_bucket()
-    return str(result)
+    return dict(buckets=result)
 
 @app.route('/beds')
 def beds():
