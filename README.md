@@ -1,5 +1,12 @@
 ## This project allows user to track availability of beds in the US
 
+### Functionality:
+```
+MVP 1
+- View all available beds 
+- View beds by utilization rate
+```
+
 ### Technologies Used
 ```
 Docker: Lightweight virtual machine
