@@ -1,10 +1,11 @@
 FROM alpine:3.12
 
-RUN apk add --no-cache py3-flask
+COPY src/ .
+COPY requirements.txt .
 
-COPY wsgi.py . 
+RUN apk add --no-cache py3-flask py3-pip
+RUN pip install -r requirements.txt
 
 EXPOSE 80
-
 ENTRYPOINT ["python3"]
 CMD ["wsgi.py"]

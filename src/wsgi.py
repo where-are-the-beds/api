@@ -1,12 +1,19 @@
 from flask import Flask
 import csv
 
+from s3 import list_bucket
+
 
 app = Flask(__name__)
 
 @app.route('/')
 def health():
     return '', 200
+
+@app.route('/test')
+def list_beds():
+    result = list_bucket()
+    return dict(buckets=result)
 
 @app.route('/beds')
 def beds():
