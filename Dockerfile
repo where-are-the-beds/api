@@ -1,9 +1,9 @@
-FROM alpine:3.12
+FROM python:3.7-slim-stretch
 
-COPY src/ .
+COPY *.py /
+COPY templates templates/
 COPY requirements.txt .
 
-RUN apk add --no-cache py3-flask py3-pip
 RUN pip install -r requirements.txt
 
 EXPOSE 80
